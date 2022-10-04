@@ -1,0 +1,4 @@
+venv/
+__pycache__/
+./core/__pycache__
+./django1/__pycache__

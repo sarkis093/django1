@@ -1,0 +1,37 @@
+{% load static %}  <!--step1 - primeira coisa a fazer ao carregar arquivos estaticos-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <!--step2 - Depois referenciar arquivos estaticos (neste caso, 'css/estilos.css') -->
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+    <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+    <title>Django1</title>
+</head>
+<body>
+<center>
+    <h1>Pagina de Produtos</h1>
+
+    <img src="{% static 'images/red.png' %}"/>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Preco</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in produtos %}
+            <tr> <!-- o Django interpreta comentario-->
+                <td><a href="{% url 'xuxa' product.id %}">{{ product.name }}</a></td>
+                <td>{{ product.price }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <button onclick="teste();">Clieque-me</button>
+
+</center>
+</body>
+</html>

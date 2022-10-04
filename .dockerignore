@@ -1,0 +1,9 @@
+# Ignore everything
+*
+
+# Allow files and directories
+!core
+!django1
+!manage.py
+!requirements.txt
+!run_web.sh

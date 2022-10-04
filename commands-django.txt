@@ -1,0 +1,12 @@
+django-admin startproject <project> // Django1
+django-admin startapp <name_application> // core
+python manage.py runserver
+# toda fez que for criado um modelo (models) é executado os comandos abaixo.
+python manage.py makemigration // pega todos os 'models' do PROJETO e das APLICAÇÕES e cria um modelo no diretorio "migrations".
+python manage.py migrate
+
+# create users
+python manage.py createsuperuser
+
+#create folder staticfiles (i.g Mode DEBUG = False)
+python manage.py collectstatic
